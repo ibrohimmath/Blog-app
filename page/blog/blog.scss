@@ -1,0 +1,217 @@
+@import url(https://fonts.googleapis.com/css?family=Heebo:100,200,300,regular,500,600,700,800,900);
+
+$mainFont: "Heebo", sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $mainFont;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none;
+}
+
+.navClosed {
+  left: -100% !important;
+}
+
+
+header {
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 18px;
+  nav {
+    z-index: 4;
+    margin-top: 20px;
+    font-weight: 550;
+    text-align: right;
+    .close {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: #00000020;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 20px;
+      transition-duration: 0.4s;
+      .cancel {
+        position: absolute;
+        top: 1%;
+        right: 3%;
+      }
+      @media (max-width: 400px) {
+        z-index: 5;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 70vw;
+        height: 100vh;
+        background: #2c3e50;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+      }      
+    }
+    li {
+      transition-duration: 0.4s;
+      &:hover {
+        color: #FF6464;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    font-size: 14px;
+  }
+}
+
+.container {
+  max-width: 1450px;
+  width: 65vw;
+  margin: auto;
+}
+
+.container {
+  .showcase {
+    margin-top: 8vh;
+    &__title {
+      color: #21243D;
+      font-size: 38px;
+      font-weight: 700;
+      @media (max-width: 1024px) {
+        font-size: 33px;
+      }
+      @media (max-width: 768px) {
+        font-size: 28px;
+      }
+    }
+    .blog {
+      &__post {   
+        height: fit-content;
+        margin-top: 8vh;
+        color: #21243D;
+        border-radius: 4px;
+        background: white;
+        transition: transform 1s;
+        position: relative;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          bottom: -4vh;
+          left: 0;
+          width: 100%;
+          height: 1px;
+          background: gray;
+        }  
+        @media (max-width: 768px) {
+          min-width: 100%;
+          max-width: 100%;
+        }
+        .post__title {
+          font-size: 30px;
+          font-weight: 700;
+          @media (max-width: 1200px) {
+            font-size: 25px;
+          }
+          @media (max-width: 1024px) {
+            font-size: 23px;
+          }
+          @media (max-width: 768px) {
+            font-size: 21px;
+          }
+        }
+        p {
+          font-size: 21px;
+          margin-top: 2vh;
+          display: flex;
+          gap: 60px;
+          @media (max-width: 1024px) {
+            gap: 40px;
+            font-size: 19px;
+          }
+          @media (max-width: 768px) {
+            gap: 30px;
+            font-size: 17px;
+          }
+          @media (max-width: 640px) {
+            font-size: 14px;
+          }
+        }
+        .post__date {
+          position: relative;
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 90%;
+            width: 1px;
+            background: #21243D;
+            right: -30px;
+            @media (max-width: 1024px) {
+              right: -20px;
+            }
+            @media (max-width: 768px) {
+              right: -15px;
+            }
+          }
+        }
+        .post__desc {
+          font-size: 18px;
+          text-align: justify;
+          width: 80%;
+          margin-top: 2vh;
+          @media (max-width: 768px) {
+            font-size: 16px;
+            width: 100%;
+          }
+        }    
+      }
+    }
+  }
+}
+
+.container {
+  footer {
+    margin-top: 200px;
+    text-align: center;
+    .icons {
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      font-size: 28px;
+    }
+    .copyright {
+      margin-top: 2vh;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

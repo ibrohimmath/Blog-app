@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+  <link rel="stylesheet" href="./style.css">
+  <script src="../node_modules/axios/dist/axios.min.js"></script>
+  <script src="./adminScript.js" defer></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="row">
+      <span class="close__sidebar"><i class="fa-solid fa-xmark"></i></span>
+    </div>
+    <div class="sidebar">
+      <div class="avatar"><i class="fa-regular fa-user"></i></div>
+      <div class="avatar__name hidden">Undefined</div>
+      <ul>
+        <li class="btn__recentposts">Recentposts</li>
+        <li class="btn__featuredworks">Featuredworks</li>
+        <li class="btn__blogposts">Blogposts</li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <nav>
+      <span class="open"><i class="fas fa-bars"></i></span>
+      <span class="user"><i class="fa-regular fa-circle-user"></i></span>
+      <ul class="user__submenu">
+        <li class="profile"><i class="fa-regular fa-user"></i> Profile</li>
+        <li class="login"><i class="fa-solid fa-right-to-bracket"></i> Login</li>
+        <li class="logout hidden"><i class="fa-solid fa-right-from-bracket"></i> Logout</li>
+        <li class="signup"><i class="fa-solid fa-user-plus"></i> Signup</li>
+      </ul>
+    </nav>
+
+    <div class="overlay__login hidden"></div>
+    <div class="modal__login hidden">
+      <div class="row">
+        <span class="close__login"><i class="fa-solid fa-xmark"></i></span>
+      </div>
+      <h1 class="title">Login</h1>
+      <div class="container__login">
+        <form class="form__login">
+          <input type="name" placeholder="Username" name="username">        
+          <input type="password" placeholder="Password" name="password">        
+          <button type="submit">Login</button>
+          <p>Not a member? <span class="signup span--blue">Sign Up</span></p>
+        </form>
+      </div>
+    </div>
+
+    <div class="overlay__signup hidden"></div>
+    <div class="modal__signup hidden">
+      <div class="row">
+        <span class="close__signup"><i class="fa-solid fa-xmark"></i></span>
+      </div>
+      <h1 class="title">Signup</h1>
+      <div class="container__signup">
+        <form class="form__signup">
+          <input type="name" placeholder="Username" name="username">        
+          <input type="password" placeholder="Password" name="password">        
+          <p>Already a member? <span class="login span--blue">Log In</span></p>
+          <button type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="section__recentposts hidden">
+      <div class="box--add">
+        <span class="add__recentpost btn__add">+ Recent Post</span>
+      </div>
+      <div class="section__frame">
+        <div class="section__main">
+          <div class="row__head">
+            <div class="col__title">
+              Title
+            </div>
+            <div class="col__date">
+              Date
+            </div>
+            <div class="col__tags">
+              Tags
+            </div>
+            <div class="col__desc">
+              Description
+            </div>
+            <div class="col__actions">
+              Actions
+            </div>
+          </div>
+          <!-- <div class="row">
+            <div class="col__title">
+              Title
+            </div>
+            <div class="col__date">
+              Date
+            </div>
+            <div class="col__tags">
+              Tags
+            </div>
+            <div class="col__desc">
+              Description
+            </div>
+            <div class="col__actions">
+              <i class="gold fa-solid fa-pen-to-square"></i>
+              <i class="red fa-solid fa-trash"></i> 
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="overlay__recentposts hidden"></div>
+      <div class="modal__recentposts hidden">
+        <div class="row">
+          <span class="close__modalrecentposts hidden"><i class="fa-solid fa-xmark"></i></span>
+        </div>  
+        <h1 class="title">Recent Post</h1>
+        <form class="form__recentposts">
+          <label for="title">Title:</label><br>
+          <input type="text" id="title" name="title" placeholder="Title"><br>
+
+          <label for="tags">Tags:</label><br>
+          <input type="text" id="tags" name="tags" placeholder="Tags"><br>
+
+          <label for="desc">Description</label><br>
+          <input type="text" id="desc" name="desc" placeholder="Description"><br>
+
+          <button type="submit">Create</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="section__recentposts hidden">
+      
+    </div>
+
+
+    <div class="section__recentposts hidden">
+      
+    </div>
+  </main>
+</body>
+</html>
+
+<!-- update icon -->
+<!-- <i class="fa-solid fa-pen-to-square"></i> -->
+
+<!-- delete icon -->
+<!-- <i class="fa-solid fa-trash"></i> -->

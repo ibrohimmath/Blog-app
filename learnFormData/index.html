@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form data</title>
+</head>
+<style>
+  main {
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .fit {
+    width: 400px;
+  }
+  input, textarea, button {
+    width: inherit;
+  }
+</style>
+<body>
+  <main>
+    <form>
+      <p class="fit">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name">
+      </p>
+    
+      <p class="fit">
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email">
+      </p>
+    
+      <p class="fit">
+        <label for="message">Message:</label><br>
+        <textarea name="message" id="message" cols="30" rows="3"></textarea>
+      </p>
+    
+      <!-- <p class="fit">
+        <input type="file">
+      </p>   -->
+
+      <button class="fit" type="submit">Submit</button>
+    </form>
+  </main>
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    
+    // Manually adding variables to FormData
+    // const file = document.querySelector("input[type='file']");
+    // console.log(file);
+    // formData.append("image", file.files[0]);
+
+    const res = Object.fromEntries(formData);
+    const payload = JSON.stringify(res);
+    console.log(payload);
+
+    for (const [name, val] of formData) {
+      console.log(name, val);
+    }
+
+    fetch("https://httpbin.org/post", {
+      method: "POST",
+      body: payload,
+      headers: {
+        "Content-Type": "application/json",
+      }
+    })
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err));
+
+  });
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
+  <link rel="stylesheet" href="./main.css">
+  <script src="../../node_modules/axios/dist/axios.min.js"></script>
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <input type="checkbox" id="check" class="hidden">
+      <label for="check" class="open hidden">
+        <i class="fa-solid fa-bars"></i>
+      </label>
+      <label for="check" class="close hidden"></label>
+      <ul class="navClosed">
+        <li><a href="#">Works</a></li>
+        <li><a href="../blog/blog.html">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <i class="cancel fa-solid fa-xmark hidden"></i>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="showcase">
+      <div class="col">
+        <div class="col col__hey">
+          Hi, I am John, <br>
+          Creative Technologist
+        </div>
+        <div class="col col__desc">
+          Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+        </div>
+        <div class="col col__resume hover--orange">
+          <a href="#">Download resume</a>
+        </div>
+      </div>
+      <div class="col col__image">
+        <img src="../img/avatar.png" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="posts">
+    <div class="container">
+      <span class="slider__left"><i class="fa-solid fa-angle-left"></i></span>
+      <span class="slider__right"><i class="fa-solid fa-angle-right"></i></span>
+      <div class="row">
+        <div class="col">Recent posts</div>
+        <!-- <div class="col">
+          <a href="#">View all</a>
+        </div> -->
+      </div>
+      <div class="row row__posts">
+        <!-- <div class="post">
+          <div class="post__title">Making a design system from scratch</div>
+          <p>
+            <span class="post__date">12 Feb 2020</span>
+            <span class="post__tags">Design, Pattern</span>
+          </p>          
+          <div class="post__desc">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.            
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="works">
+      <p>Featured works</p>
+      <!-- <div class="work">
+        <div class="col col__image">
+          <img src="./img/featured_works/dashboard.png">
+        </div>
+        <div class="col col__content">
+          <div class="work__title">Designing Dashboards</div>
+          <p>
+            <span class="work__year">2020</span>
+            <span class="work__type">Dashboard</span>
+          </p>
+          <div class="work__desc">
+            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+
+  <div class="container">
+    <footer>
+      <div class="icons">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+      <div class="copyright">
+        Copyright ©2020 All rights reserved 
+      </div>
+      <br><br>
+    </footer>
+  </div>
+</body>
+</html>
+
