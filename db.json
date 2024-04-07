@@ -8,6 +8,7 @@
         "Pattern"
       ],
       "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "user_id": 2,
       "id": 1
     },
     {
@@ -18,28 +19,8 @@
         "Icon Design"
       ],
       "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "user_id": 1,
       "id": 2
-    },
-    {
-      "title": "asdf",
-      "desc": "asdfasdfasdfasdfasdf",
-      "date": "28 Mar 2024",
-      "tags": "[asdf,asdf,asdf,asdf]",
-      "id": 3
-    },
-    {
-      "title": "Sieve of Erathosenes",
-      "tags": "[math,competitive programming,number theory]",
-      "desc": "lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit lorem ipsum dolor sit",
-      "date": "28 Mar 2024",
-      "id": 4
-    },
-    {
-      "title": "Naruto",
-      "tags": "[manga,anime,shonen,war,fun]",
-      "desc": "Lorem ipsum dolor site amet Lorem ipsum dolor site amet Lorem ipsum dolor site amet Lorem ipsum dolor site amet Lorem ipsum dolor site amet ",
-      "date": "28 Mar 2024",
-      "id": 5
     }
   ],
   "featuredworks": [
@@ -95,89 +76,12 @@
     {
       "username": "ibrohim",
       "password": "1111",
-      "id": 1,
-      "recentposts": [
-        {
-          "title": "Making a design system from scratch",
-          "date": "12 Feb 2020",
-          "tags": [
-            "Design",
-            "Pattern"
-          ],
-          "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          "id": 1
-        }
-      ],
-      "featuredworks": [
-        {
-          "img": "../img/featured_works/dashboard.png",
-          "title": "Designing Dashboards",
-          "year": "2020",
-          "type": "Dashboard",
-          "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          "id": 1
-        }
-      ],
-      "blogposts": [
-        {
-          "title": "UI Interactions of the week",
-          "date": "12 Feb 2019",
-          "tags": [
-            "Express",
-            "Handlebars"
-          ],
-          "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          "id": 1
-        }
-      ]
+      "id": 1
     },
     {
       "username": "jahongir",
       "password": "2222",
-      "id": 2,
-      "recentposts": [
-        {
-          "title": "Creating pixel perfect icons in Figma",
-          "date": "12 Feb 2020",
-          "tags": [
-            "Figma",
-            "Icon Design"
-          ],
-          "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          "id": 2
-        }
-      ],
-      "featuredworks": [
-        {
-          "img": "../img/featured_works/vibrant.png",
-          "title": "Vibrant portraits of 2020",
-          "year": "2018",
-          "type": "Illustration",
-          "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          "id": 2
-        },
-        {
-          "img": "../img/featured_works/malayalam.png",
-          "title": "36 Days of Malayam type",
-          "year": "2018",
-          "type": "Typography",
-          "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
-          "id": 3
-        }
-      ],
-      "blogposts": [
-        {
-          "title": "Mathematics",
-          "date": "3 Mar 2021",
-          "tags": [
-            "Math",
-            "Algorithms",
-            "Competitive programming"
-          ],
-          "desc": "Everybody should learn mathematics and programming",
-          "id": 3
-        }
-      ]
+      "id": 2
     }
   ]
 }
