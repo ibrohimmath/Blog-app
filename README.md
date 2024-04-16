@@ -8,3 +8,6 @@
 
 ## Index Page
 ![Index_page](index_page.png)
+
+## Blog Page
+![Blog_page](blog_page.png)
