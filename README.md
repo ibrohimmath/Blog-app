@@ -5,3 +5,6 @@
 
 ## Admin Page
 ![Admin_page](admin_recentposts.png)
+
+## Index Page
+![Index_page](index_page.png)
