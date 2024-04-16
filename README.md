@@ -2,6 +2,7 @@
 
 > Install json-server: ```npm install -g json-server``` <br />
 > Open admin.html and index.html with live server
+> Run json-server: ```json-server --watch db.json```
 
 ## Admin Page
 ![Admin_page](admin_recentposts.png)
