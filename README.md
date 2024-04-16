@@ -3,3 +3,5 @@
 > Install json-server: ```npm install -g json-server``` <br />
 > Open admin.html and index.html with live server
 
+## Admin Page
+![Admin_page](admin_recentposts.png)
