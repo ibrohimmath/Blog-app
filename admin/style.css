@@ -4,12 +4,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  text-decoration: none;
   list-style: none;
 }
 
 body {
   font-family: "open-sans", sans-serif;
+}
+
+a {
+  color: inherit;
 }
 
 .hidden {
@@ -340,10 +343,12 @@ main .btn__add:hover {
   border: 4px solid rgb(46, 194, 46);
 }
 main .section__recentposts {
-  height: calc(100vh - 48px);
+  height: -moz-fit-content;
+  height: fit-content;
   background: rgb(237, 236, 236);
   width: 100%;
   position: relative;
+  padding-bottom: 15px;
 }
 main .section__recentposts .box--add {
   position: relative;
@@ -351,7 +356,9 @@ main .section__recentposts .box--add {
 }
 main .section__recentposts .section__frame {
   margin: 0 auto;
-  height: calc(98vh - 148px);
+  min-height: calc(98vh - 148px);
+  height: -moz-fit-content;
+  height: fit-content;
   width: 98%;
   border-radius: 10px;
   padding: 25px;
@@ -365,12 +372,16 @@ main .section__recentposts .section__frame .section__main {
 }
 main .section__recentposts .section__frame .section__main .row {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 3fr 2fr;
+  grid-template-columns: 1fr 1fr 2fr 3fr 1fr;
+  align-items: center;
+}
+main .section__recentposts .section__frame .section__main .row:not(:last-of-type) {
   border-bottom: 1px solid black;
 }
 main .section__recentposts .section__frame .section__main .row__head {
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr 3fr 2fr;
+  grid-template-columns: 1fr 1fr 2fr 3fr 1fr;
+  align-items: center;
   border-bottom: 1px solid black;
 }
 main .section__recentposts .section__frame .section__main .row__head .col__title, main .section__recentposts .section__frame .section__main .row__head .col__date, main .section__recentposts .section__frame .section__main .row__head .col__tags, main .section__recentposts .section__frame .section__main .row__head .col__desc, main .section__recentposts .section__frame .section__main .row__head .col__actions {
@@ -454,6 +465,268 @@ main .section__recentposts .modal__recentposts .form__recentposts button {
   }
 }
 main .section__recentposts .modal__recentposts .form__recentposts button:hover {
+  color: white;
+  background: black;
+}
+main .section__featuredworks {
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgb(237, 236, 236);
+  width: 100%;
+  position: relative;
+  padding-bottom: 15px;
+}
+main .section__featuredworks .box--add {
+  position: relative;
+  height: 100px;
+}
+main .section__featuredworks .section__frame {
+  margin: 0 auto;
+  min-height: calc(98vh - 148px);
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 98%;
+  border-radius: 10px;
+  padding: 25px;
+  background: white;
+}
+main .section__featuredworks .section__frame .section__main {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgb(237, 236, 236) !important;
+}
+main .section__featuredworks .section__frame .section__main .row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr 1fr 2fr 8fr 2fr;
+}
+main .section__featuredworks .section__frame .section__main .row:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+main .section__featuredworks .section__frame .section__main .row__head {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 2fr 8fr 2fr;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+main .section__featuredworks .section__frame .section__main .row__head .col__img, main .section__featuredworks .section__frame .section__main .row__head .col__title, main .section__featuredworks .section__frame .section__main .row__head .col__year, main .section__featuredworks .section__frame .section__main .row__head .col__type, main .section__featuredworks .section__frame .section__main .row__head .col__desc, main .section__featuredworks .section__frame .section__main .row__head .col__actions {
+  padding: 15px 20px;
+  text-align: center;
+  justify-self: center;
+}
+main .section__featuredworks .section__frame .section__main .row .col__img, main .section__featuredworks .section__frame .section__main .row .col__title, main .section__featuredworks .section__frame .section__main .row .col__year, main .section__featuredworks .section__frame .section__main .row .col__type, main .section__featuredworks .section__frame .section__main .row .col__desc, main .section__featuredworks .section__frame .section__main .row .col__actions {
+  padding: 15px 20px;
+  text-align: center;
+  justify-self: center;
+}
+main .section__featuredworks .section__frame .section__main .row .col__actions {
+  line-height: 25px;
+}
+main .section__featuredworks .overlay__featuredworks {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(84, 83, 83, 0.24);
+}
+main .section__featuredworks .modal__featuredworks {
+  z-index: 6;
+  background: white;
+  position: absolute;
+  top: calc(50vh - 3%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  width: 65vw;
+}
+main .section__featuredworks .modal__featuredworks .row {
+  text-align: right;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+main .section__featuredworks .modal__featuredworks .title {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
+}
+main .section__featuredworks .modal__featuredworks .form__featuredworks label {
+  display: block;
+  margin-top: 3vh;
+}
+main .section__featuredworks .modal__featuredworks .form__featuredworks input {
+  margin-top: 1vh;
+  padding-bottom: 10px;
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+main .section__featuredworks .modal__featuredworks .form__featuredworks input:focus {
+  border-color: black;
+  color: black;
+}
+main .section__featuredworks .modal__featuredworks .form__featuredworks button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 10px;
+  border-radius: 20px;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+@media (max-width: 768px) {
+  main .section__featuredworks .modal__featuredworks .form__featuredworks button {
+    width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  main .section__featuredworks .modal__featuredworks .form__featuredworks button {
+    width: 130px;
+  }
+}
+main .section__featuredworks .modal__featuredworks .form__featuredworks button:hover {
+  color: white;
+  background: black;
+}
+main .section__blogposts {
+  height: -moz-fit-content;
+  height: fit-content;
+  background: rgb(237, 236, 236);
+  width: 100%;
+  position: relative;
+  padding-bottom: 15px;
+}
+main .section__blogposts .box--add {
+  position: relative;
+  height: 100px;
+}
+main .section__blogposts .section__frame {
+  margin: 0 auto;
+  min-height: calc(98vh - 148px);
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 98%;
+  border-radius: 10px;
+  padding: 25px;
+  background: white;
+}
+main .section__blogposts .section__frame .section__main {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgb(237, 236, 236) !important;
+}
+main .section__blogposts .section__frame .section__main .row {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr 3fr 6fr 2fr;
+}
+main .section__blogposts .section__frame .section__main .row:not(:last-of-type) {
+  border-bottom: 1px solid black;
+}
+main .section__blogposts .section__frame .section__main .row__head {
+  display: grid;
+  grid-template-columns: 2fr 1fr 3fr 6fr 2fr;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+main .section__blogposts .section__frame .section__main .row__head .col__title, main .section__blogposts .section__frame .section__main .row__head .col__date, main .section__blogposts .section__frame .section__main .row__head .col__tags, main .section__blogposts .section__frame .section__main .row__head .col__desc, main .section__blogposts .section__frame .section__main .row__head .col__actions {
+  padding: 15px 20px;
+  text-align: center;
+  justify-self: center;
+}
+main .section__blogposts .section__frame .section__main .row .col__title, main .section__blogposts .section__frame .section__main .row .col__date, main .section__blogposts .section__frame .section__main .row .col__tags, main .section__blogposts .section__frame .section__main .row .col__desc, main .section__blogposts .section__frame .section__main .row .col__actions {
+  padding: 15px 20px;
+  text-align: center;
+  justify-self: center;
+}
+main .section__blogposts .section__frame .section__main .row .col__actions {
+  line-height: 25px;
+}
+main .section__blogposts .overlay__blogposts {
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(84, 83, 83, 0.24);
+}
+main .section__blogposts .modal__blogposts {
+  z-index: 6;
+  background: white;
+  position: absolute;
+  top: calc(50vh - 3%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: 1px solid black;
+  width: 65vw;
+}
+main .section__blogposts .modal__blogposts .row {
+  text-align: right;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+main .section__blogposts .modal__blogposts .title {
+  text-align: center;
+  width: 100%;
+  padding-bottom: 15px;
+  border-bottom: 1px solid gray;
+}
+main .section__blogposts .modal__blogposts .form__blogposts label {
+  display: block;
+  margin-top: 3vh;
+}
+main .section__blogposts .modal__blogposts .form__blogposts input {
+  margin-top: 1vh;
+  padding-bottom: 10px;
+  width: 100%;
+  font-size: 17px;
+  border: none;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+main .section__blogposts .modal__blogposts .form__blogposts input:focus {
+  border-color: black;
+  color: black;
+}
+main .section__blogposts .modal__blogposts .form__blogposts button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 5vh;
+  padding: 10px;
+  border-radius: 20px;
+  width: 300px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+@media (max-width: 768px) {
+  main .section__blogposts .modal__blogposts .form__blogposts button {
+    width: 200px;
+  }
+}
+@media (max-width: 600px) {
+  main .section__blogposts .modal__blogposts .form__blogposts button {
+    width: 130px;
+  }
+}
+main .section__blogposts .modal__blogposts .form__blogposts button:hover {
   color: white;
   background: black;
 }

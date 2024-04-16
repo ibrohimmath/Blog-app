@@ -132,28 +132,28 @@ axios.get(urlFeaturedWorks)
   .then(({data}) => getFeaturedWorks(data))
   .catch(err => console.log(err));
 
-const getFeaturedWorks = function(data) {
+const getFeaturedWorks = async function(data) {
   const featuredWorksDiv = document.querySelector(".works");
-  data.forEach(item => {
+  data.forEach((item) => {
+    let link = item.img;
     const html = `
-    <div class="work">
-      <div class="col col__image">
-        <img src="${item.img}">
-      </div>
-      <div class="col col__content">
-        <div class="work__title">${item.title}</div>
-        <p>
-          <span class="work__year">${item.year}</span>
-          <span class="work__type">${item.type}</span>
-        </p>
-        <div class="work__desc">
-          ${item.desc}
+      <div class="work">
+        <div class="col col__image">
+          <img src="${item.img}">
         </div>
-      </div>
-    </div>    
-    `;
-
-    featuredWorksDiv.insertAdjacentHTML("beforeend", html);
+        <div class="col col__content">
+          <div class="work__title">${item.title}</div>
+          <p>
+            <span class="work__year">${item.year}</span>
+            <span class="work__type">${item.type}</span>
+          </p>
+          <div class="work__desc">
+            ${item.desc}
+          </div>
+        </div>
+      </div>    
+    `;    
+    featuredWorksDiv.insertAdjacentHTML("beforeend", html);  
   }); 
 }
 

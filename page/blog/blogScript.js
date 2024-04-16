@@ -61,12 +61,16 @@ const getBlogPosts = function(data) {
   const blogDiv = document.querySelector(".showcase");
 
   data.forEach(item => {
+    let arr = item.tags;
+    if (typeof arr === "string") {
+      arr = arr.replace(/\[|\]/g,'').split(',').map(word => word[0].toUpperCase() + word.slice(1));
+    }    
     const html = `
     <div class="blog blog__post">
       <div class="post__title">${item.title}</div>
       <p>
         <span class="post__date">${item.date}</span>
-        <span class="post__tags">${item.tags.join(", ")}</span>
+        <span class="post__tags">${arr.join(", ")}</span>
       </p>          
       <div class="post__desc">
         ${item.desc}     

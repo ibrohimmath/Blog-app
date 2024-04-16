@@ -10,6 +10,7 @@
   <script src="./adminScript.js" defer></script>
 </head>
 <body>
+  <!-- Sidebar -->
   <div class="wrapper">
     <div class="row">
       <span class="close__sidebar"><i class="fa-solid fa-xmark"></i></span>
@@ -25,7 +26,9 @@
     </div>
   </div>
 
+  <!-- Main -->
   <main>
+    <!-- Navbar -->
     <nav>
       <span class="open"><i class="fas fa-bars"></i></span>
       <span class="user"><i class="fa-regular fa-circle-user"></i></span>
@@ -37,6 +40,7 @@
       </ul>
     </nav>
 
+    <!-- Login Modal -->
     <div class="overlay__login hidden"></div>
     <div class="modal__login hidden">
       <div class="row">
@@ -53,6 +57,7 @@
       </div>
     </div>
 
+    <!-- Signup Modal -->
     <div class="overlay__signup hidden"></div>
     <div class="modal__signup hidden">
       <div class="row">
@@ -69,6 +74,7 @@
       </div>
     </div>
 
+    <!-- Recent posts -->
     <div class="section__recentposts hidden">
       <div class="box--add">
         <span class="add__recentpost btn__add">+ Recent Post</span>
@@ -92,6 +98,7 @@
               Actions
             </div>
           </div>
+
           <!-- <div class="row">
             <div class="col__title">
               Title
@@ -133,35 +140,149 @@
       </div>
     </div>
 
-    <div class="overlay__recentposts hidden"></div>
-    <div class="modal__recentposts hidden">
-      <div class="row">
-        <span class="close__modalrecentposts hidden"><i class="fa-solid fa-xmark"></i></span>
-      </div>  
-      <h1 class="title">Recent Post</h1>
-      <form class="form__recentposts">
-        <label for="title">Title:</label><br>
-        <input type="text" id="title" name="title" placeholder="Title"><br>
+    <!-- Featured works -->
+    <div class="section__featuredworks hidden">
+      <div class="box--add">
+        <span class="add__featuredwork btn__add">+ Recent FeaturedWork</span>
+      </div>
+      <div class="section__frame">
+        <!-- img title year type desc -->
+        <div class="section__main">
+          <div class="row__head">
+            <div class="col__img">
+              IMG
+            </div>
+            <div class="col__title">
+              Title
+            </div>
+            <div class="col__year">
+              Year
+            </div>
+            <div class="col__type">
+              Type
+            </div>
+            <div class="col__desc">
+              Description
+            </div>
+            <div class="col__actions">
+              Actions
+            </div>
+          </div>
+          
+          <!-- <div class="row">
+            <div class="col__img">
+              <a href="../img/featured_works/dashboard.png">URL</a>
+            </div>
+            <div class="col__title">
+              Designing Dashboards
+            </div>
+            <div class="col__year">
+              2020
+            </div>
+            <div class="col__type">
+              Dashboard
+            </div>
+            <div class="col__desc">
+              Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            </div>
+            <div class="col__actions">
+              <i class="gold fa-solid fa-pen-to-square"></i>
+              <i class="red fa-solid fa-trash"></i> 
+            </div>            
+          </div> -->
+        </div>
+      </div>
+      <div class="overlay__featuredworks hidden"></div>
+      <div class="modal__featuredworks hidden">
+        <div class="row">
+          <span class="close__modalfeaturedworks hidden"><i class="fa-solid fa-xmark"></i></span>
+        </div>  
+        <h1 class="title">Featured work</h1>
+        <form class="form__featuredworks">
+          <label for="file">Image:</label><br>
+          <input type="file" name="img" id="file" placeholder="Image">
 
-        <label for="tags">Tags:</label><br>
-        <input type="text" id="tags" name="tags" placeholder="Tags"><br>
+          <label for="title">Title:</label><br>
+          <input type="text" id="title" name="title" placeholder="Title"><br>
 
-        <label for="desc">Description</label><br>
-        <input type="text" id="desc" name="desc" placeholder="Description"><br>
+          <label for="year">Year:</label><br>
+          <input type="number" id="year" name="year" placeholder="Year"><br>
 
-        <button type="submit">Create</button>
-      </form>
+          <label for="type">Type:</label><br>
+          <input type="text" id="type" name="type" placeholder="Type">
+
+          <label for="desc">Description</label><br>
+          <input type="text" id="desc" name="desc" placeholder="Description"><br>
+
+          <button type="submit">Create</button>
+        </form>
+      </div>
     </div>
-  </div>
 
+    <!-- Blog posts -->
+    <div class="section__blogposts hidden">
+      <div class="box--add">
+        <span class="add__blogpost btn__add">+ Recent Blogpost</span>
+      </div>
+      <div class="section__frame">
+        <div class="section__main">
+          <div class="row__head">
+            <div class="col__title">
+              Title
+            </div>
+            <div class="col__date">
+              Date
+            </div>
+            <div class="col__tags">
+              Tags
+            </div>
+            <div class="col__desc">
+              Description
+            </div>
+            <div class="col__actions">
+              Actions
+            </div>
+          </div>
 
-    <div class="section__recentposts hidden">
-      
-    </div>
+          <!-- <div class="row">
+            <div class="col__title">
+              Title
+            </div>
+            <div class="col__date">
+              Date
+            </div>
+            <div class="col__tags">
+              Tags
+            </div>
+            <div class="col__desc">
+              Description
+            </div>
+            <div class="col__actions">
+              <i class="gold fa-solid fa-pen-to-square"></i>
+              <i class="red fa-solid fa-trash"></i> 
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="overlay__blogposts hidden"></div>
+      <div class="modal__blogposts hidden">
+        <div class="row">
+          <span class="close__modalblogposts hidden"><i class="fa-solid fa-xmark"></i></span>
+        </div>  
+        <h1 class="title">Recent Blogpost</h1>
+        <form class="form__blogposts">
+          <label for="title">Title:</label><br>
+          <input type="text" id="title" name="title" placeholder="Title"><br>
 
+          <label for="tags">Tags:</label><br>
+          <input type="text" id="tags" name="tags" placeholder="Tags"><br>
 
-    <div class="section__recentposts hidden">
-      
+          <label for="desc">Description</label><br>
+          <input type="text" id="desc" name="desc" placeholder="Description"><br>
+
+          <button type="submit">Create</button>
+        </form>
+      </div>
     </div>
   </main>
 </body>
